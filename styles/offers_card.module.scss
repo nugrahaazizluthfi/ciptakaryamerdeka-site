@@ -1,0 +1,58 @@
+@mixin transparent {
+  content: '';
+  background-image: url('../public/images/mempish.png');
+  background-repeat: no-repeat;
+  background-size: 350px;
+  opacity: 0.3;
+  top: 180px;
+  left: -80px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.card_wrapper {
+  @apply p-2;
+  .card_offers {
+    @apply relative;
+    @apply rounded-md shadow-md border border-indigo-100 h-72 p-4  cursor-pointer overflow-hidden;
+    @apply transition-all duration-300 ease-in hover:bg-custom-header;
+
+    .card_offers_icon {
+      @apply absolute bottom-3 right-3;
+      width: 70px;
+      height: 70px;
+    }
+
+    .card_offers_maintitle {
+      @apply text-3xl font-semibold text-custom-header mb-5;
+    }
+
+    .card_offers_text {
+      @apply mb-5;
+      color: #4a6580;
+    }
+
+    &::after {
+      @include transparent;
+    }
+
+    &:hover {
+      &:after {
+        @include transparent;
+      }
+      .card_offers_maintitle {
+        @apply text-white;
+      }
+
+      .card_offers_text {
+        color: #bfbfbf;
+      }
+
+      .card_offers_link {
+        @apply text-green-500;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.mynavbar {
+  @apply pt-5;
+  .company_identity {
+    text-align: center;
+    svg,
+    span {
+      display: inline-block;
+    }
+
+    svg {
+      width: 60px !important;
+      height: 60px !important;
+    }
+  }
+
+  ul {
+    li {
+      display: inline-block;
+      padding: 0.5rem;
+      margin-right: 10px;
+      a {
+        @apply text-white font-semibold;
+        font-size: 1rem;
+      }
+    }
+  }
+}

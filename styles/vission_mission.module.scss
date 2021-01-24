@@ -1,0 +1,15 @@
+.vission_box {
+  @apply relative bg-custom-header p-5 rounded-md shadow-md text-center;
+  &::after {
+    content: '';
+    background-image: url('../public/images/mempish2.png');
+    background-repeat: repeat;
+    background-size: 120px;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+}

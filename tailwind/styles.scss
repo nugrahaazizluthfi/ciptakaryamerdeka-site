@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap);
+@import '~tailwindcss/base';
+@import '~tailwindcss/components';
+@import '~tailwindcss/utilities';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+@import './navbar.scss';
+@import './stars.scss';
+
+.herosection {
+  background: transparent
+    linear-gradient(139deg, rgba(26, 54, 82, 1) 24%, rgba(11, 38, 64, 1) 100%);
+  .mainslide {
+    margin-top: 10rem;
+  }
+
+  .hero {
+    .hero-wrapper {
+      @apply relative;
+
+      svg {
+        @apply absolute;
+        height: 400px !important;
+        width: auto !important;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .tagline {
+    &-tagline-headtext {
+      @apply font-semibold pb-3 text-white uppercase text-4xl;
+    }
+
+    &-firsttext,
+    &-secondtext,
+    &-thirdtext {
+      @apply font-semibold pb-3 text-white;
+    }
+  }
+}
+
+.offerssection {
+  background-color: #ffffff;
+}
+
+.officersection {
+  @apply bg-custom-header relative overflow-hidden;
+  &::after {
+    content: '';
+    background-image: url('../public/images/mempish.png');
+    background-repeat: no-repeat;
+    background-size: 550px;
+    opacity: 0.2;
+    top: -200px;
+    left: -200px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+  }
+}
