@@ -46,6 +46,11 @@
   background-color: #ffffff;
 }
 
+.vissionmissionsection {
+  background-color: #ebf0f5;
+  overflow: hidden;
+}
+
 .officersection {
   @apply bg-custom-header relative overflow-hidden;
   &::after {
@@ -61,4 +66,8 @@
     position: absolute;
     z-index: 0;
   }
+}
+
+.footersection {
+  @apply bg-custom-header overflow-hidden;
 }

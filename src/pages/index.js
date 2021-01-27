@@ -5,6 +5,8 @@ import Hero from 'src/fragments/Hero';
 import Offers from 'src/fragments/Offers/Index';
 import VissionMission from 'src/fragments/VissionMission/Index';
 import OurOfficers from 'src/fragments/OurOfficers/Index';
+import NewsAndBlog from 'src/fragments/NewsAndBlog/Index';
+import Footer from '../fragments/Footer';
 
 export default function Home() {
   useEffect(() => {
@@ -24,11 +26,17 @@ export default function Home() {
         <section>
           <Offers />
         </section>
-        <section style={{ background: '#ebf0f5', overflow: 'hidden' }}>
+        <section className="vissionmissionsection">
           <VissionMission />
         </section>
         <section className="officersection">
           <OurOfficers />
+        </section>
+        <section className="newsandblogsection">
+          <NewsAndBlog />
+        </section>
+        <section className="footersection">
+          <Footer />
         </section>
       </main>
     </>
