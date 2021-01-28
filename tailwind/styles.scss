@@ -71,3 +71,19 @@
 .footersection {
   @apply bg-custom-header overflow-hidden;
 }
+
+.skew-bg {
+  background-color: none;
+
+  &::after {
+    @apply bg-custom-header;
+    content: '';
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: -90px;
+    right: 0;
+    transform: skewY(-3deg);
+    z-index: -1;
+  }
+}
