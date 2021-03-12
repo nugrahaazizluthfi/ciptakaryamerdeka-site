@@ -10,47 +10,61 @@ import styles from 'styles/offers_card.module.scss';
 export default function Offers() {
   var slickSettings = {
     arrows: false,
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
     adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 1,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        },
+      },
+    ],
   };
 
   const data = [
     {
-      title: 'High Balance Mortgage',
+      title: 'Renovasi',
       description: 'Migration do amet contur diisci velit suia nonnua',
       image: <ImageSavings className={styles.card_offers_icon} />,
     },
     {
-      title: 'Renovation Loans for Buyer',
+      title: 'Pembangunan',
       description: 'Migration do amet contur diisci velit suia nonnua',
       image: <ImageDollar className={styles.card_offers_icon} />,
     },
     {
-      title: 'A Conventional Home Loan',
-      description: 'Migration do amet contur diisci velit suia nonnua',
-      image: <ImageHierarci className={styles.card_offers_icon} />,
-    },
-    {
-      title: 'Homeready Fannie Mortgage',
-      description: 'Migration do amet contur diisci velit suia nonnua',
-      image: <ImageHome className={styles.card_offers_icon} />,
-    },
-    {
-      title: 'High Balance Mortgage',
-      description: 'Migration do amet contur diisci velit suia nonnua',
-      image: <ImageSavings className={styles.card_offers_icon} />,
-    },
-    {
-      title: 'Renovation Loans for Buyer',
-      description: 'Migration do amet contur diisci velit suia nonnua',
-      image: <ImageDollar className={styles.card_offers_icon} />,
-    },
-    {
-      title: 'A Conventional Home Loan',
+      title: 'Macam-macam Alumunium',
       description: 'Migration do amet contur diisci velit suia nonnua',
       image: <ImageHierarci className={styles.card_offers_icon} />,
     },

@@ -20,7 +20,7 @@ export default function CardOffers({
           <div>
             <h1 className={card_offers_maintitle}>{title}</h1>
             <p className={card_offers_text}>{description}</p>
-            <p className={card_offers_link}>Read More...</p>
+            {/* <p className={card_offers_link}>Read More...</p> */}
           </div>
         </div>
       </div>

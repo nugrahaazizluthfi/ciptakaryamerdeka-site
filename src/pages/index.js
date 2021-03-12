@@ -8,8 +8,10 @@ import OurOfficers from 'src/fragments/OurOfficers/Index';
 import NewsAndBlog from 'src/fragments/NewsAndBlog/Index';
 import Footer from '../fragments/Footer';
 
-export default function Home() {
-  useEffect(() => {
+import api from 'src/constants/api';
+
+function Home({ vissionmission, ourteams, articles, profile }) {
+  useEffect(async () => {
     window.scroll(0, 0);
   }, []);
   return (
@@ -27,18 +29,31 @@ export default function Home() {
           <Offers />
         </section>
         <section className="vissionmissionsection">
-          <VissionMission />
+          <VissionMission data={vissionmission} />
         </section>
         <section className="officersection">
-          <OurOfficers />
+          <OurOfficers data={ourteams} />
         </section>
         <section className="newsandblogsection">
-          <NewsAndBlog />
+          <NewsAndBlog data={articles} />
         </section>
         <section className="footersection">
-          <Footer />
+          <Footer data={profile} quicklinks={articles} />
         </section>
       </main>
     </>
   );
 }
+
+Home.getInitialProps = async () => {
+  try {
+    const vissionmission = await api.vissionmission();
+    const ourteams = await api.ourteams();
+    const articles = await api.articles();
+    const profile = await api.profile();
+
+    return { vissionmission, ourteams, articles, profile };
+  } catch (error) {}
+};
+
+export default Home;

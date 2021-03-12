@@ -3,7 +3,7 @@ import styles from 'styles/vission_mission.module.scss';
 
 export default function Box({ title, description }) {
   return (
-    <div className="p-4">
+    <div className="p-4 responsive-vimi">
       <div className={styles.vission_box}>
         <h1
           className="inline-flex p-1 pl-2 pr-2 mb-3 text-3xl font-semibold text-center text-gray-700 

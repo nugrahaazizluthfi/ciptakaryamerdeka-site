@@ -1,8 +1,7 @@
-import React from 'react';
 import Officers from './Officers';
 import styles from 'styles/officers.module.scss';
 
-export default function Index() {
+export default function Index({ data }) {
   return (
     <>
       <div className="container mx-auto">
@@ -14,13 +13,22 @@ export default function Index() {
             Know More About <br /> Our Team
           </h1>
         </div>
-        <div className="flex justify-between">
-          <Officers {...styles} />
-          <Officers {...styles} />
-          <Officers {...styles} />
-          <Officers {...styles} />
+        <div className="flex flex-wrap justify-center">
+          {data.length > 0 ? (
+            data?.map((row, index) => {
+              return (
+                <div key={index} className="responsive-card responsive-padding">
+                  <Officers {...row} {...styles} />
+                </div>
+              );
+            })
+          ) : (
+            <h1 className="text-center text-5xl text-semibold mt-10 text-white">
+              No Data
+            </h1>
+          )}
         </div>
-        <div className="mb-20"></div>
+        <div className="mb-10"></div>
       </div>
     </>
   );
