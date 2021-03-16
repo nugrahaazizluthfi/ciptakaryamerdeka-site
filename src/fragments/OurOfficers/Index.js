@@ -14,7 +14,7 @@ export default function Index({ data }) {
           </h1>
         </div>
         <div className="flex flex-wrap justify-center">
-          {data.length > 0 ? (
+          {data?.length > 0 ? (
             data?.map((row, index) => {
               return (
                 <div key={index} className="responsive-card responsive-padding">

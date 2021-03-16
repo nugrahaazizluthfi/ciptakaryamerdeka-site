@@ -7,7 +7,7 @@ import ReactHtmlParser from 'react-html-parser';
 
 import api from 'src/constants/api';
 
-function Slug({ article }) {
+function Slug({ article, articles, profile }) {
   const {
     published_at,
     content_title,
@@ -108,7 +108,7 @@ function Slug({ article }) {
           </section>
         </section>
         <section className="footersection">
-          <Footer />
+          <Footer data={profile} quicklinks={articles} />
         </section>
       </main>
     </>
@@ -118,8 +118,10 @@ function Slug({ article }) {
 Slug.getInitialProps = async ({ query }) => {
   try {
     const article = await api.article({ params: { slug: query.slug } });
+    const articles = await api.articles();
+    const profile = await api.profile();
 
-    return { article };
+    return { article, profile, articles };
   } catch (error) {}
 };
 
