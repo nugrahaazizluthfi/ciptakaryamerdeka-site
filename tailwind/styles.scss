@@ -155,3 +155,26 @@
     }
   }
 }
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 110% !important;
+  z-index: 100;
+}
+
+.slick-arrow {
+  background: rgba(0, 0, 0, 0.5) !important;
+  padding: 10px;
+  height: 50px;
+  width: 35px;
+  border-radius: 5px;
+}

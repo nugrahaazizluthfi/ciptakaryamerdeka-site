@@ -9,8 +9,8 @@ import styles from 'styles/offers_card.module.scss';
 
 export default function Offers() {
   var slickSettings = {
-    arrows: false,
-    dots: false,
+    arrows: true,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -59,17 +59,27 @@ export default function Offers() {
       image: <ImageSavings className={styles.card_offers_icon} />,
     },
     {
-      title: 'Pembangunan',
+      title: 'Desain Interior',
+      description: 'Migration do amet contur diisci velit suia nonnua',
+      image: <ImageSavings className={styles.card_offers_icon} />,
+    },
+    {
+      title: 'Desain Eksterior',
       description: 'Migration do amet contur diisci velit suia nonnua',
       image: <ImageDollar className={styles.card_offers_icon} />,
     },
     {
-      title: 'Macam-macam Alumunium',
+      title: 'Furniture',
       description: 'Migration do amet contur diisci velit suia nonnua',
       image: <ImageHierarci className={styles.card_offers_icon} />,
     },
     {
-      title: 'Homeready Fannie Mortgage',
+      title: 'Macam Produk Alumunium',
+      description: 'Migration do amet contur diisci velit suia nonnua',
+      image: <ImageHome className={styles.card_offers_icon} />,
+    },
+    {
+      title: 'Pagar',
       description: 'Migration do amet contur diisci velit suia nonnua',
       image: <ImageHome className={styles.card_offers_icon} />,
     },
@@ -99,9 +109,7 @@ export default function Offers() {
                   {...styles}
                   title={item.title}
                   description={item.description}
-                >
-                  {item.image}
-                </CardOffers>
+                ></CardOffers>
               );
             })}
         </Slider>
