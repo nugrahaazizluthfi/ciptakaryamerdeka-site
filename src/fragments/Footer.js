@@ -2,14 +2,9 @@ import React from 'react';
 import LogoFooter from 'public/images/logo.svg';
 import Link from 'next/link';
 import news from 'src/dummy/news';
+import profile from 'src/dummy/profile';
 
-export default function Footer({
-  company_address,
-  company_number,
-  company_email,
-  quicklinks,
-}) {
-  console.log(quicklinks);
+export default function Footer() {
   return (
     <>
       <div className="container mx-auto">
@@ -18,19 +13,20 @@ export default function Footer({
             <div className="responsive-card footer-padding mb-5">
               <LogoFooter className="w-28 h-28" />
               <p className="mb-5 mt-5 text-md pr-5">
-                {company_address ??
+                {profile.company_address ??
                   `Pento Financial Services, Inc. 200 Wood Avenue South, Ninth
                 Floor Iselin, NJ 65432`}
               </p>
               <p>
                 <span style={{ fontSize: '13px' }}>Phone</span>
-                <br /> <strong>{`${company_number ?? '2992888'}`}</strong>
+                <br />{' '}
+                <strong>{`${profile.company_phone ?? '2992888'}`}</strong>
               </p>
               <p>
                 <span style={{ fontSize: '13px' }}>Email</span>
                 <br />{' '}
                 <strong>{`${
-                  company_email ?? 'mail@ciptakaryamerdeka20.com'
+                  profile.company_mail ?? 'mail@ciptakaryamerdeka20.com'
                 }`}</strong>
               </p>
             </div>
@@ -40,7 +36,7 @@ export default function Footer({
                 {news?.length > 0 ? (
                   news.map((row, index) => {
                     return (
-                      <li className="mb-2 hover:text-yellow-300">
+                      <li key={index} className="mb-2 hover:text-yellow-300">
                         <Link href={`/news/${row.slug}`}>
                           <a>{`${row.content_title ?? 'No Link'}`}</a>
                         </Link>

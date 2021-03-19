@@ -157,17 +157,17 @@
 }
 
 .slick-next {
-  right: 10px;
+  right: 40%;
 }
 
 .slick-prev {
-  left: 10px;
+  left: 40%;
 }
 
 .slick-prev,
 .slick-next {
   position: absolute;
-  top: 110% !important;
+  top: 120% !important;
   z-index: 100;
 }
 

@@ -1,5 +1,6 @@
 .mynavbar {
   @apply pt-5;
+  z-index: 2000;
   .company_identity {
     text-align: center;
     svg,

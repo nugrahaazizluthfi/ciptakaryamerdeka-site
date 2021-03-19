@@ -17,7 +17,6 @@ export default function Officers({
   linkedin_address,
   avatar,
 }) {
-  console.log(peopleName);
   return (
     <>
       <div className="relative mx-auto w-40 h-40 rounded-full bg-white border-8 border-custom-header -bottom-7 overflow-hidden">
@@ -43,7 +42,6 @@ export default function Officers({
             }&text=Halo,%20%Selamat20siang%20pak...`}
             target="_blank"
             rel="noreferrer noopener"
-            onClick={() => alert('tes')}
           >
             <a>
               <ImageWa className={officers_socialmedia} />
@@ -63,21 +61,27 @@ export default function Officers({
             target="_blank"
             rel="noreferrer noopener"
           >
-            <ImageTw className={officers_socialmedia} />
+            <a>
+              <ImageTw className={officers_socialmedia} />
+            </a>
           </Link>
           <Link
             href={`${instagram_address ?? '#'}`}
             target="_blank"
             rel="noreferrer noopener"
           >
-            <ImageIg className={officers_socialmedia} />
+            <a>
+              <ImageIg className={officers_socialmedia} />
+            </a>
           </Link>
           <Link
             href={`${linkedin_address ?? '#'}`}
             target="_blank"
             rel="noreferrer noopener"
           >
-            <ImageLi className={officers_socialmedia} />
+            <a>
+              <ImageLi className={officers_socialmedia} />
+            </a>
           </Link>
         </div>
       </div>

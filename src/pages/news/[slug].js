@@ -14,7 +14,9 @@ function Slug({ article, articles, profile }) {
     content_title,
     content_image,
     content_description,
-  } = article;
+  } = article[0];
+
+  console.log('article', article.content_image);
   return (
     <>
       <Head>

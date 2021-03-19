@@ -21,7 +21,7 @@ export default function NewsAndBlog({ data }) {
           {data?.length > 0
             ? data?.map((item, index) => {
                 return (
-                  <Link href={`/news/${item.slug}`}>
+                  <Link key={index} href={`/news/${item.slug}`}>
                     <a
                       key={index}
                       className="responsive-news responsive-padding"
@@ -33,7 +33,7 @@ export default function NewsAndBlog({ data }) {
               })
             : news?.map((item, index) => {
                 return (
-                  <Link href={`/news/${item.slug}`}>
+                  <Link key={index} href={`/news/${item.slug}`}>
                     <a
                       key={index}
                       className="responsive-news responsive-padding"

@@ -18,36 +18,21 @@ export default function Navbar() {
                 <a>Home</a>
               </Link>
             </li>
-            {/* <li>
-              <Link href="/">
-                <a>About Us</a>
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link href="/">
-                <a>Our Service</a>
-              </Link>
-            </li>
             <li>
-              <Link href="/">
-                <a>Our Team</a>
-              </Link>
-            </li> */}
-            <li>
-              <Link href="/">
+              <Link href="/products">
                 <a>Our Product</a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/works">
+                <a>Our Works</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/news">
                 <a>News</a>
               </Link>
             </li>
-            {/* <li>
-              <Link href="/">
-                <a>Contact Us</a>
-              </Link>
-            </li> */}
           </ul>
         </div>
       </navbar>
