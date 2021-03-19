@@ -4,6 +4,7 @@ import Header from 'src/fragments/Header';
 import Footer from 'src/fragments/Footer';
 import moment from 'moment';
 import ReactHtmlParser from 'react-html-parser';
+import news from 'src/dummy/news';
 
 import api from 'src/constants/api';
 
@@ -13,7 +14,7 @@ function Slug({ article, articles, profile }) {
     content_title,
     content_image,
     content_description,
-  } = article[0];
+  } = article;
   return (
     <>
       <Head>
@@ -44,11 +45,7 @@ function Slug({ article, articles, profile }) {
             <div className="block border-4 border-gray-200 h-96 w-2/4 mx-auto bg-gray-100">
               <img
                 className="object-center object-cover items-center w-full h-full"
-                src={`${process.env.NEXT_PUBLIC_API_HOST}${
-                  content_image.length > 0
-                    ? content_image[0]?.formats?.thumbnail?.url
-                    : '#'
-                }`}
+                src={`${content_image}`}
                 alt={`${content_title ?? 'Zulkarnain'}`}
               />
             </div>
@@ -117,7 +114,11 @@ function Slug({ article, articles, profile }) {
 
 Slug.getInitialProps = async ({ query }) => {
   try {
-    const article = await api.article({ params: { slug: query.slug } });
+    // const article = await api.article({ params: { slug: query.slug } });
+    const article = news.filter(function (el) {
+      return el.slug === query.slug;
+    });
+
     const articles = await api.articles();
     const profile = await api.profile();
 

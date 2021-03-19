@@ -1,9 +1,9 @@
 import React from 'react';
 import Card from './Card';
 import Link from 'next/link';
+import news from 'src/dummy/news';
 
 export default function NewsAndBlog({ data }) {
-  console.log(data);
   return (
     <>
       <div className="container mx-auto">
@@ -18,21 +18,31 @@ export default function NewsAndBlog({ data }) {
         </div>
 
         <div className="flex flex-wrap justify-center">
-          {data?.length > 0 ? (
-            data?.map((item, index) => {
-              return (
-                <Link href={`/news/${item.slug}`}>
-                  <a key={index} className="responsive-news responsive-padding">
-                    <Card {...item} />
-                  </a>
-                </Link>
-              );
-            })
-          ) : (
-            <h1 className="text-center text-5xl text-semibold mt-10">
-              No Data
-            </h1>
-          )}
+          {data?.length > 0
+            ? data?.map((item, index) => {
+                return (
+                  <Link href={`/news/${item.slug}`}>
+                    <a
+                      key={index}
+                      className="responsive-news responsive-padding"
+                    >
+                      <Card {...item} />
+                    </a>
+                  </Link>
+                );
+              })
+            : news?.map((item, index) => {
+                return (
+                  <Link href={`/news/${item.slug}`}>
+                    <a
+                      key={index}
+                      className="responsive-news responsive-padding"
+                    >
+                      <Card {...item} />
+                    </a>
+                  </Link>
+                );
+              })}
         </div>
 
         <div className="mb-24"></div>

@@ -17,11 +17,7 @@ export default function Card({
         <div className="bg-gray-300 h-40 overflow-hidden">
           <img
             className="object-center object-cover items-center w-full h-full"
-            src={`${process.env.NEXT_PUBLIC_API_HOST}${
-              content_image.length > 0
-                ? content_image[0]?.formats?.thumbnail?.url
-                : '#'
-            }`}
+            src={content_image}
             alt={`${content_title ?? 'Zulkarnain'}`}
           />
         </div>

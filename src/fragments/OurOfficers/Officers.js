@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function Officers({
   officers_socialmedia,
-  name,
+  peopleName,
   position,
   whatsapp_number,
   facebook_address,
@@ -17,18 +17,19 @@ export default function Officers({
   linkedin_address,
   avatar,
 }) {
+  console.log(peopleName);
   return (
     <>
       <div className="relative mx-auto w-40 h-40 rounded-full bg-white border-8 border-custom-header -bottom-7 overflow-hidden">
         <img
           className="object-center object-cover items-center"
-          src={`${process.env.NEXT_PUBLIC_API_HOST}${avatar?.formats?.medium?.url}`}
-          alt={`${name ?? 'Zulkarnain'}`}
+          src={`${avatar}`}
+          alt={`${peopleName ?? 'Zulkarnain'}`}
         />
       </div>
       <div className="bg-white rounded-md p-2 divide-y-2 divide-custom-header">
         <h1 className="pt-8 text-center font-semibold text-custom-header text-xl">
-          {`${name ?? 'Zulkarnain'}`}
+          {`${peopleName ?? 'Zulkarnain'}`}
         </h1>
         <h1 className="text-center text-custom-sun font-semibold uppercase">
           {`${position ?? 'Branch Manager'}`}

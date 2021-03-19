@@ -1,6 +1,7 @@
 import React from 'react';
 import LogoFooter from 'public/images/logo.svg';
 import Link from 'next/link';
+import news from 'src/dummy/news';
 
 export default function Footer({
   company_address,
@@ -36,8 +37,8 @@ export default function Footer({
             <div className="responsive-card footer-padding  mb-5">
               <h1 className="text-2xl font-semibold mb-5">Quick Links</h1>
               <ul>
-                {quicklinks?.length > 0 ? (
-                  quicklinks.map((row, index) => {
+                {news?.length > 0 ? (
+                  news.map((row, index) => {
                     return (
                       <li className="mb-2 hover:text-yellow-300">
                         <Link href={`/news/${row.slug}`}>

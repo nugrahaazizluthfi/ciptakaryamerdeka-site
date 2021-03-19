@@ -1,5 +1,6 @@
 import Officers from './Officers';
 import styles from 'styles/officers.module.scss';
+import ourOfficers from 'src/dummy/ourteams';
 
 export default function Index({ data }) {
   return (
@@ -14,19 +15,27 @@ export default function Index({ data }) {
           </h1>
         </div>
         <div className="flex flex-wrap justify-center">
-          {data?.length > 0 ? (
-            data?.map((row, index) => {
-              return (
-                <div key={index} className="responsive-card responsive-padding">
-                  <Officers {...row} {...styles} />
-                </div>
-              );
-            })
-          ) : (
-            <h1 className="text-center text-5xl text-semibold mt-10 text-white">
-              No Data
-            </h1>
-          )}
+          {data?.length > 0
+            ? data?.map((row, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="responsive-card responsive-padding"
+                  >
+                    <Officers {...row} {...styles} />
+                  </div>
+                );
+              })
+            : ourOfficers.map((row, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="responsive-card responsive-padding"
+                  >
+                    <Officers {...row} {...styles} />
+                  </div>
+                );
+              })}
         </div>
         <div className="mb-10"></div>
       </div>
