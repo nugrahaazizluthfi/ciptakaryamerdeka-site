@@ -1,5 +1,3 @@
-import moment from 'moment';
-
 const news = [
   {
     slug: 'what-means-your-mortgage1',
@@ -11,7 +9,7 @@ const news = [
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe modi veritatis eos eum atque corporis blanditiis sed non nobis aperiam?
                       `,
     content_image: '/image1.jpeg',
-    published_at: moment().format('DD MMMM YYYY'),
+    content_created: '07 Maret 2021',
   },
   {
     slug: 'what-means-your-mortgage2',
@@ -23,7 +21,7 @@ const news = [
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe modi veritatis eos eum atque corporis blanditiis sed non nobis aperiam?
                       `,
     content_image: '/image2.jpeg',
-    published_at: moment().format('DD MMMM YYYY'),
+    content_created: '07 Maret 2021',
   },
   {
     slug: 'what-means-your-mortgage3',
@@ -35,7 +33,7 @@ const news = [
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe modi veritatis eos eum atque corporis blanditiis sed non nobis aperiam?
                       `,
     content_image: '/image3.jpeg',
-    published_at: moment().format('DD MMMM YYYY'),
+    content_created: '07 Maret 2021',
   },
   {
     slug: 'what-means-your-mortgage4',
@@ -47,7 +45,7 @@ const news = [
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe modi veritatis eos eum atque corporis blanditiis sed non nobis aperiam?
                       `,
     content_image: '/image4.jpeg',
-    published_at: moment().format('DD MMMM YYYY'),
+    content_created: '07 Maret 2021',
   },
 ];
 

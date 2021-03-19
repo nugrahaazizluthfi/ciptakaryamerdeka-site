@@ -10,7 +10,7 @@ import api from 'src/constants/api';
 
 function Slug({ article, articles, profile }) {
   const {
-    published_at,
+    content_created,
     content_title,
     content_image,
     content_description,
@@ -33,8 +33,8 @@ function Slug({ article, articles, profile }) {
             <p className="text-center text-white">
               Author,{' '}
               {`${
-                published_at
-                  ? moment(published_at).format('DD MMMM YYYY')
+                content_created
+                  ? moment(content_created).format('DD MMMM YYYY')
                   : '29 Januari 2021'
               }`}
             </p>

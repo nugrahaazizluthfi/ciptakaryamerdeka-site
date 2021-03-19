@@ -5,9 +5,8 @@ export default function Card({
   content_title,
   content_short,
   content_image,
-  published_at,
+  content_created,
 }) {
-  console.log(content_image[0]?.formats);
   return (
     <>
       <div
@@ -25,8 +24,8 @@ export default function Card({
           <p className="text-xs">
             Author,{' '}
             {`${
-              published_at
-                ? moment(published_at).format('DD MMMM YYYY')
+              content_created
+                ? moment(content_created).format('DD MMMM YYYY')
                 : '29 Januari 2021'
             }`}
           </p>
