@@ -9,7 +9,7 @@ import styles from 'styles/offers_card.module.scss';
 
 export default function Offers() {
   var slickSettings = {
-    arrows: true,
+    arrows: false,
     dots: true,
     infinite: true,
     speed: 500,
@@ -22,7 +22,7 @@ export default function Offers() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          arrows: true,
+          arrows: false,
           dots: true,
         },
       },
@@ -31,7 +31,7 @@ export default function Offers() {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          arrows: true,
+          arrows: false,
           dots: true,
         },
       },
@@ -41,7 +41,7 @@ export default function Offers() {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 1,
-          arrows: true,
+          arrows: false,
           dots: true,
         },
       },
