@@ -19,7 +19,7 @@ function Index() {
         </section>
         <section>
           <section className="container mx-auto article mb-20">
-            <div className="mt-3 "></div>
+            <div className="mt-20"></div>
             <h1 className="relative text-5xl text-center w-3/4 mx-auto font-semibold text-custom-sun mb-10">
               {`Our News`}
             </h1>

@@ -2,21 +2,12 @@ import React from 'react';
 import Head from 'next/head';
 import Header from 'src/fragments/Header';
 import Footer from 'src/fragments/Footer';
-import moment from 'moment';
 import ReactHtmlParser from 'react-html-parser';
 import news from 'src/dummy/news';
 
 import api from 'src/constants/api';
 
 function Slug({ article, articles, profile }) {
-  const {
-    content_created,
-    content_title,
-    content_image,
-    content_description,
-  } = article[0];
-
-  console.log('article', article.content_image);
   return (
     <>
       <Head>
@@ -29,31 +20,31 @@ function Slug({ article, articles, profile }) {
         </section>
         <section>
           <section className="container mx-auto article">
-            <div className="mt-3 "></div>
+            <div className="mt-20"></div>
             <p className="text-center text-white">
               Author,{' '}
               {`${
-                content_created
-                  ? moment(content_created).format('DD MMMM YYYY')
+                article[0]?.content_created
+                  ? article[0]?.content_created
                   : '29 Januari 2021'
               }`}
             </p>
             <h1 className="relative text-5xl text-center w-3/4 mx-auto font-semibold text-custom-sun mb-10">
               {`${
-                content_title ??
+                article[0]?.content_title ??
                 'What Means Your Mortgage And 5 Ways To Improve'
               }`}
             </h1>
             <div className="block border-4 border-gray-200 h-96 w-2/4 mx-auto bg-gray-100">
               <img
                 className="object-center object-cover items-center w-full h-full"
-                src={`${content_image}`}
-                alt={`${content_title ?? 'Zulkarnain'}`}
+                src={`${article[0]?.content_image}`}
+                alt={`${article[0]?.content_title ?? 'Zulkarnain'}`}
               />
             </div>
             <div className="mt-10 mb-10 leading-relaxed text-justify p-5">
-              {content_description ? (
-                ReactHtmlParser(content_description)
+              {article[0]?.content_description ? (
+                ReactHtmlParser(article[0]?.content_description)
               ) : (
                 <>
                   <p>

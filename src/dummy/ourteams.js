@@ -1,8 +1,8 @@
 const ourOfficers = [
   {
-    peopleName: 'Zulkarnain',
+    peopleName: 'Wisnu Wicaksono',
     position: 'Marketing Director',
-    whatsapp_number: '08921888291',
+    whatsapp_number: '+6285721700299',
     facebook_address: 'http://facebook.com',
     twitter_address: 'http://twitter.com',
     instagram_address: 'http://instagram.com',
@@ -10,9 +10,9 @@ const ourOfficers = [
     avatar: '/zulkarnain.jpeg',
   },
   {
-    peopleName: 'Jojo',
+    peopleName: 'Sasongko',
     position: 'Project Manager',
-    whatsapp_number: '08921888291',
+    whatsapp_number: '+6285721700299',
     facebook_address: 'http://facebook.com',
     twitter_address: 'http://twitter.com',
     instagram_address: 'http://instagram.com',

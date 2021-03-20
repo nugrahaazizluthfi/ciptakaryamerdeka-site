@@ -5,6 +5,7 @@ import Footer from 'src/fragments/Footer';
 import products from 'src/dummy/products';
 import profile from 'src/dummy/profile';
 import ImageWa from 'public/images/whatsapp.svg';
+import ImageIg from 'public/images/instagram.svg';
 import Link from 'next/link';
 
 function Index() {
@@ -20,7 +21,7 @@ function Index() {
         </section>
         <section>
           <section className="container mx-auto article mb-20 p-2">
-            <div className="mt-3 "></div>
+            <div className="mt-20"></div>
             <h1 className="relative text-5xl text-center w-3/4 mx-auto font-semibold text-custom-sun mb-10">
               {`Our Products`}
             </h1>
@@ -31,7 +32,7 @@ function Index() {
                     <>
                       <div
                         key={index}
-                        className="bg-white overflow-auto shadow-md"
+                        className="bg-white overflow-auto shadow-md rounded-md"
                       >
                         <div className="w-full bg-gray-900">
                           <img
@@ -46,22 +47,25 @@ function Index() {
                               {row.product_name}
                             </span>
                           </h3>
-                          <div className="p-2 overflow-auto">
-                            <span className="text-md float-left block p-2">
-                              <div className="text-xs">Harga:</div>
-                              <div className="text-lg font-semibold">
-                                {row.product_price}
-                              </div>
-                            </span>
+                          <div className="overflow-auto text-center">
                             <Link
                               href={`https://api.whatsapp.com/send?phone=${
                                 profile.company_phone ?? '#'
-                              }&text=Halo,%20%Selamat20siang%20pak...`}
+                              }&text=Selamat%20siang%2C%20saya%20tertarik%20untuk%20berkonsultasi`}
                               target="_blank"
                               rel="noreferrer noopener"
                             >
-                              <a className="text-md text-center float-right bg-green-500 block p-2 rounded-md text-white font-semibold mr-2 cursor-pointer">
-                                <ImageWa className="w-6 rounded-md" />
+                              <a className="text-sm text-center block float-right font-semibold p-2 cursor-pointer">
+                                <ImageWa className="h-8 rounded-md relative mx-auto" />{' '}
+                              </a>
+                            </Link>
+                            <Link
+                              href={`${profile.company_ig ?? '#'}`}
+                              target="_blank"
+                              rel="noreferrer noopener"
+                            >
+                              <a className="text-sm text-center block float-right font-semibold p-2 cursor-pointer">
+                                <ImageIg className="h-8 rounded-md relative mx-auto" />{' '}
                               </a>
                             </Link>
                           </div>

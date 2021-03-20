@@ -39,7 +39,7 @@ export default function Officers({
           <Link
             href={`https://api.whatsapp.com/send?phone=${
               whatsapp_number ?? '#'
-            }&text=Halo,%20%Selamat20siang%20pak...`}
+            }&text=Selamat%20siang%2C%20saya%20tertarik%20untuk%20berkonsultasi`}
             target="_blank"
             rel="noreferrer noopener"
           >

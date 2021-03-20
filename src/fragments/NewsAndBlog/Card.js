@@ -1,5 +1,4 @@
 import React from 'react';
-import moment from 'moment';
 
 export default function Card({
   content_title,
@@ -22,12 +21,7 @@ export default function Card({
         </div>
         <div className="mt-4">
           <p className="text-xs">
-            Author,{' '}
-            {`${
-              content_created
-                ? moment(content_created).format('DD MMMM YYYY')
-                : '29 Januari 2021'
-            }`}
+            Author, {`${content_created ? content_created : '29 Januari 2021'}`}
           </p>
         </div>
         <h1
